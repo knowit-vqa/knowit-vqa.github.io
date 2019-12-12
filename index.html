@@ -1,1 +1,262 @@
-Hello World
+<!-- Stage- Bootstrap one page Event ticket booking theme 
+Created by pixpalette.com - online design magazine -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>KnowIT VQA</title>
+    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.png"/>
+
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	
+    <div class="loader">
+       <div>
+        <img src="images/icons/preloader.gif" />
+       </div>
+    </div>
+    
+    <div class="container-fluid">
+		<div class="row">
+        	<div class="col-sm-5 left-wrapper">
+            	<div class="event-banner-wrapper">
+                	<div class="logo">
+                        <h1>Osaka University</h1>
+                    </div>
+
+                	<h2>
+                    <br> KnowIT VQA
+                    <span>Answering Knowledge-Based Questions about Videos</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-sm-7 right-wrapper">
+            	<div class="event-ticket-wrapper">
+                    
+                    <div class="event-tab">
+                
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#paper" aria-controls="paper" role="tab" data-toggle="tab">Paper</a></li>
+                    <li role="presentation"><a href="#download" aria-controls="download" role="tab" data-toggle="tab">Download</a></li>
+                    <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+                    <li role="presentation"><a href="#leaderboard" aria-controls="leaderboard" role="tab" data-toggle="tab">Leaderboard</a></li>
+                      <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
+                  </ul>
+                
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="paper">
+                        <div class="col-md-12 text-center">
+                            <h2><b>KnowIT VQA Paper</b></h2><br>
+                        </div>
+                        <h4> KnowIT VQA is a video dataset with 24,282 human-generated question-answer pairs about The Big Bang Theory.
+                            The dataset combines visual, textual and temporal coherence reasoning together with knowledge-based
+                            questions, which need of the experience obtained from the viewing of the series to be answered.
+                        </h4><br>
+                        <h4>Our AAAI 2020 paper:</h4>
+                        <img src="images/paper.png" class="img-responsive"/><br><br>
+                        <div class="col-md-12 text-center">
+                            <a href="https://arxiv.org/abs/1910.10706" class="btn btn-success" role="button">Read Paper</a>
+                        </div><br><br><br>
+                        <h4>If you find our paper useful, please cite us:</h4>
+<pre>
+@InProceedings{garcia2020knowit,
+   author    = {Noa Garcia and Mayu Otani and Chenhui Chu and Yuta Nakashima},
+   title     = {KnowIT VQA: Answering Knowledge-Based Questions about Videos},
+   booktitle = {Proceedings of the Thirty-Fourth AAAI Conference on Artificial Intelligence},
+   year      = {2020},
+}</pre>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="download">
+                        <div class="col-md-12 text-center">
+                            <h2><b>Dataset Download</b></h2><br>
+                        </div>
+                    	<h4><u>&#9642; KnowIT VQA Annotations:</u> <a href="https://knowit-vqa.s3-ap-northeast-1.amazonaws.com/knowit_data.zip">[Download]</a></h4>
+                        <h5>It contains 3 csv files (tab separated): knowit_data_train.csv, knowit_data_val.csv, and knowit_data_test.csv. </h5>
+                        <br>
+                        <h4><u>&#9642; Annotations Format:</u></h4>
+                        <h5>Each row in the csv files corresponds to a sample.</h5>
+                        <h5>Each sample contains the following fields: </h5><br>
+
+                        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Field</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">scene</td>
+      <td>str</td>
+      <td>Video clip id as <i>sXXeYY_sceneZZZ_AAAA_BBBB</i>
+          <ul>
+              <li><i>XX</i>  is the season number.</li>
+              <li><i>YY</i>  is the episode number</li>
+              <li><i>ZZZ</i> is scene number</li>
+              <li><i>AAAA</i> is the first frame number of the scene (extracted at 1fps)</li>
+              <li><i>BBBB</i> is the last frame number of the scene (extracted at 1fps)</li>
+          </ul>
+      </td>
+    </tr>
+  <tr>
+      <td scope="row">question</td>
+      <td>str</td>
+      <td>Question.</td>
+    </tr>
+    <tr>
+      <td scope="row">answer1</td>
+      <td>str</td>
+      <td>First candidate answer.</td>
+    </tr>
+        <tr>
+      <td scope="row">answer2</td>
+      <td>str</td>
+      <td>Second candidate answer.</td>
+    </tr>
+        <tr>
+      <td scope="row">answer3</td>
+      <td>str</td>
+      <td>Third candidate answer.</td>
+    </tr>
+        <tr>
+      <td scope="row">answer4</td>
+      <td>str</td>
+      <td>Forth candidate answer.</td>
+    </tr>
+    <tr>
+      <td scope="row">idxCorrect</td>
+      <td>int</td>
+      <td>Index of the correct answer (1-4).</td>
+    </tr>
+  <tr>
+  <tr>
+      <td scope="row">reason</td>
+      <td>str</td>
+      <td>Knowledge, i.e. information that is required to answer the question.</td>
+    </tr>
+    <tr>
+      <td scope="row">kg_type</td>
+      <td>str</td>
+      <td>Whether the knowledge type is episode-specific or recurrent.</td>
+    </tr>
+    <tr>
+      <td scope="row">subtitle</td>
+      <td>str</td>
+      <td>Subtitles of the video clip.</td>
+    </tr>
+      <tr>
+      <td scope="row">QType</td>
+      <td>str</td>
+      <td>Question type (only on the test set).</td>
+    </tr>
+  </tbody>
+</table>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="code">
+                        <div class="col-md-12 text-center">
+                            <h2><b>ROCK: Retrieval Over Collected Knowledge</b></h2><br>
+                        </div>
+                        <h4>ROCK is a model for Knowledge-Based Visual Question Answering in Videos.
+                            It incorporates the use of external knowledge to answer questions about video clips.</h4>
+                        <h4>ROCK is based on the availability of language instances representing the knowledge in a certain
+                            universe. ROCK retrieves those instances and fuses them with video representations for answer
+                            prediction.</h4><br>
+			<div class="col-lg-2"></div>
+                        <div class="col-lg-9">
+                            <img src="images/rock.png" class="img-responsive"/><br><br>
+                        </div>
+                        <div class="col-md-12 text-center">
+                        <a href="https://github.com/noagarcia/knowit-rock" class="btn btn-success" role="button">ROCK Code</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="leaderboard">
+                        <div class="col-md-12 text-center">
+                            <h2><b>KnowIT VQA Leaderboard</b></h2><br>
+                        </div>
+                        <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Rank</th>
+      <th scope="col">Date</th>
+      <th scope="col">Model</th>
+      <th scope="col">Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Sep 5, 2019</td>
+        <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-concepts</a></td>
+      <td>0.654</td>
+    </tr>
+      <tr>
+      <th scope="row">2</th>
+      <td>Sep 5, 2019</td>
+          <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-image</a></td>
+      <td>0.654</td>
+    </tr>
+      <tr>
+      <th scope="row">3</th>
+      <td>Sep 5, 2019</td>
+          <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-facial</a></td>
+      <td>0.654</td>
+    </tr>
+      <tr>
+      <th scope="row">4</th>
+      <td>Sep 5, 2019</td>
+          <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-caption</a></td>
+      <td>0.635</td>
+    </tr>
+
+  </tbody>
+</table>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="contact">
+                        <div class="col-md-12 text-center">
+                            <h2><b>Contact us!</b></h2><br>
+                        </div>
+                        <h4>If you have any inquiry, suggestion, or doubt, please contact Noa Garcia:</h4>
+                        <h4><a href="mailto:&#110;&#111;&#097;&#103;&#097;&#114;&#099;&#105;&#097;&#064;&#105;&#100;&#115;&#046;&#111;&#115;&#097;&#107;&#097;&#045;&#117;&#046;&#097;&#099;&#046;&#106;&#112;">&#110;&#111;&#097;&#103;&#097;&#114;&#099;&#105;&#097;&#064;&#105;&#100;&#115;&#046;&#111;&#115;&#097;&#107;&#097;&#045;&#117;&#046;&#097;&#099;&#046;&#106;&#112;</a>
+                        </h4>
+                    </div>
+
+
+                  </div>
+                
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/allscript.js"></script>
+  </body>
+</html>
