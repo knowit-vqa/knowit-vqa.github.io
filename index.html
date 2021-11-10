@@ -76,6 +76,20 @@ Created by pixpalette.com - online design magazine -->
                         <div class="col-md-12 text-center">
                             <a href="https://arxiv.org/abs/1910.10706" class="btn btn-success" role="button">Read Paper</a>
                         </div><br><br><br>
+
+                        <div class="col-md-12 text-center">
+                          <h2><b>KnowIT-X VQA Paper</b></h2><br>
+                        </div>
+                        <h4> KnowIT-X VQA follows the same structure as KnowIT VQA and is used as the target dataset for VideoQA transfer learning. 
+                          This dataset contains 21,412 human-generated question-answer pairs about Friends.
+                        </h4><br>
+                        <h4>Our BMVC 2021 paper:</h4>
+                        <img src="images/bmvc_paper.png" class="img-responsive" /><br><br>
+                        <div class="col-md-12 text-center">
+                          <a href="https://arxiv.org/pdf/2110.13395v1.pdf" class="btn btn-success" role="button">Read Paper</a>
+                        </div><br><br><br>
+                    
+                        
                         <h4>If you find our paper useful, please cite us:</h4>
 <pre>
 @InProceedings{garcia2020knowit,
@@ -84,17 +98,43 @@ Created by pixpalette.com - online design magazine -->
    booktitle = {Proceedings of the Thirty-Fourth AAAI Conference on Artificial Intelligence},
    year      = {2020},
 }</pre>
+
+<!-- <pre>
+@InProceedings{garcia2020knowledge,
+    author = {Noa Garcia and Yuta Nakashima},
+    title = {Knowledge-Based Video Question Answering with Unsupervised Scene Descriptions},
+    booktitle = {Proceedings of the European Conference on Computer Vision},
+    year = {2020},
+}
+</pre> -->
+
+<pre>
+@InProceedings{wu2021transferring},
+   author    = {Tianran Wu and Noa Garcia and Mayu Otani and Chenhui Chu and Yuta Nakashima and Haruo Takemura},
+   title     = {Transferring Domain-Agnostic Knowledge in Video Question Answering},
+   booktitle = {BMVC},
+   year      = {2021},
+}</pre>
+
+
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="download">
                         <div class="col-md-12 text-center">
                             <h2><b>Dataset Download</b></h2><br>
                         </div>
-                    	<h4><u>&#9642; KnowIT VQA Annotations:</u> <a href="https://knowit-vqa.s3-ap-northeast-1.amazonaws.com/knowit_data.zip">[Download]</a></h4>
+                    	  <h4><u>&#9642; KnowIT VQA Annotations:</u> <a href="https://knowit-vqa.s3-ap-northeast-1.amazonaws.com/knowit_data.zip">[Download]</a></h4>
                         <h5>It contains 3 csv files (tab separated): knowit_data_train.csv, knowit_data_val.csv, and knowit_data_test.csv. </h5>
+                        <br>
+                        <h4><u>&#9642; KnowIT-X VQA Annotations:</u> <a
+                            href="https://drive.google.com/file/d/1aL4Ul2hk9tHtCnrCTLvtztVHZqYa510h/view?usp=sharing">[Download]</a></h4>
+                        <h5>It contains 3 csv files (tab separated): knowit_x_data_train.csv, knowit_x_data_val.csv, and knowit_x_data_test.csv. </h5>
                         <br>
                         <h4><u>&#9642; Annotations Format:</u></h4>
                         <h5>Each row in the csv files corresponds to a sample.</h5>
                         <h5>Each sample contains the following fields: </h5><br>
+
+                        
+                        
 
                         <table class="table">
   <thead>
@@ -182,14 +222,29 @@ Created by pixpalette.com - online design magazine -->
                         <h4>ROCK is based on the availability of language instances representing the knowledge in a certain
                             universe. ROCK retrieves those instances and fuses them with video representations for answer
                             prediction.</h4><br>
-			<div class="col-lg-2"></div>
-                        <div class="col-lg-9">
+			                  <div class="col-lg-2"></div>
+                        <div class="col-lg-10">
                             <img src="images/rock.png" class="img-responsive"/><br><br>
                         </div>
                         <div class="col-md-12 text-center">
-                        <a href="https://github.com/noagarcia/knowit-rock" class="btn btn-success" role="button">ROCK Code</a>
+                        <a href="https://github.com/noagarcia/knowit-rock" class="btn btn-success" role="button">ROCK Code</a><br><br><br>
+                        </div>
+      
+                        <div class="col-md-12 text-center">
+                            <h2><b>Transferring Domain-Agnostic Knowledge in VideoQA</b></h2><br>
+                        </div>
+                        <h4> We proposed two modules to help transfer the knowledge and 
+                             boost the performance on knowledge-based VideoQA models.</h4><br>
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-9">
+                            <img src="images/transfer.jpg" class="img-responsive" /><br><br>
+                        </div>
+                        <div class="col-md-12 text-center">
+                        <a href="https://github.com/noagarcia/knowit-rock" class="btn btn-success" role="button">Code</a>
                         </div><br>
-                    </div>
+                        </div>
+                   
+
                     <div role="tabpanel" class="tab-pane fade" id="leaderboard">
                         <div class="col-md-12 text-center">
                             <h2><b>KnowIT VQA Leaderboard</b></h2><br>
@@ -206,41 +261,55 @@ Created by pixpalette.com - online design magazine -->
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Sep 5, 2019</td>
-        <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-concepts</a></td>
-      <td>0.654</td>
+      <td>2021</td>
+        <td><a href="https://github.com/InterDigitalInc/DialogSummary-VideoQA">dialogsummary-videoqa</a></td>
+      <td>0.781</td>
     </tr>
-      <tr>
+    <tr>
       <th scope="row">2</th>
-      <td>Sep 5, 2019</td>
-          <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-image</a></td>
-      <td>0.654</td>
+      <td>2020</td>
+          <td><a href="https://github.com/noagarcia/ROLL-VideoQA">ROLL</a></td>
+      <td>0.715</td>
     </tr>
-      <tr>
+    <tr>
       <th scope="row">3</th>
       <td>Sep 5, 2019</td>
-          <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-facial</a></td>
+      <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-concepts</a></td>
       <td>0.654</td>
     </tr>
-      <tr>
+    <tr>
       <th scope="row">4</th>
       <td>Sep 5, 2019</td>
-          <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-caption</a></td>
+      <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-image</a></td>
+      <td>0.654</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Sep 5, 2019</td>
+      <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-facial</a></td>
+      <td>0.654</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Sep 5, 2019</td>
+      <td><a href="https://github.com/noagarcia/knowit-rock">ROCK-caption</a></td>
       <td>0.635</td>
+    </tr>
     </tr>
 
   </tbody>
 </table>
-                    </div>
+</div>
 
-                    <div role="tabpanel" class="tab-pane fade" id="contact">
-                        <div class="col-md-12 text-center">
-                            <h2><b>Contact us!</b></h2><br>
-                        </div>
-                        <h4>If you have any inquiry, suggestion, or doubt, please contact Noa Garcia:</h4>
-                        <h4><a href="mailto:&#110;&#111;&#097;&#103;&#097;&#114;&#099;&#105;&#097;&#064;&#105;&#100;&#115;&#046;&#111;&#115;&#097;&#107;&#097;&#045;&#117;&#046;&#097;&#099;&#046;&#106;&#112;">&#110;&#111;&#097;&#103;&#097;&#114;&#099;&#105;&#097;&#064;&#105;&#100;&#115;&#046;&#111;&#115;&#097;&#107;&#097;&#045;&#117;&#046;&#097;&#099;&#046;&#106;&#112;</a>
-                        </h4>
-                    </div>
+
+<div role="tabpanel" class="tab-pane fade" id="contact">
+    <div class="col-md-12 text-center">
+        <h2><b>Contact us!</b></h2><br>
+    </div>
+    <h4>If you have any inquiry, suggestion, or doubt, please contact Noa Garcia:</h4>
+    <h4><a href="mailto:&#110;&#111;&#097;&#103;&#097;&#114;&#099;&#105;&#097;&#064;&#105;&#100;&#115;&#046;&#111;&#115;&#097;&#107;&#097;&#045;&#117;&#046;&#097;&#099;&#046;&#106;&#112;">&#110;&#111;&#097;&#103;&#097;&#114;&#099;&#105;&#097;&#064;&#105;&#100;&#115;&#046;&#111;&#115;&#097;&#107;&#097;&#045;&#117;&#046;&#097;&#099;&#046;&#106;&#112;</a>
+    </h4>
+</div>
 
 
                   </div>
